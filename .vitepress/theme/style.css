@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+	@font-face {
+	  font-family: 'Inknut Antiqua';
+	  font-style: normal;
+	  font-weight: 400;
+	  font-display: swap;
+	  src: url('/Inknut_Antiqua/InknutAntiqua-Regular.ttf') ;
+	}
+  }
+
+
+.character-text h1 {
+	@apply text-lg text-[#b89e44] font-inkut my-4;
+}
