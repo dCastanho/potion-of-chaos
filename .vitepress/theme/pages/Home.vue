@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
+import { computed, onMounted, ref, watch } from 'vue';
 import CharacterCard from '../components/CharacterCard.vue'
+import HomepageCard from '../components/HomepageCard.vue'
 import ArrowRight from '../icons/ArrowRight.vue'
 
 interface Character {
@@ -9,67 +10,43 @@ interface Character {
   ci: number
 }
 
-const characters = [
+const charactersRef = [
   { image: "/cici.png", name: "Cici", ci: 0, link: '/cici' },
   { image: "/minerva.png", name: "Minerva", ci: 1, link: '/minerva' },
   { image: "/rhya.png", name: "Rhyia", ci: 2, link: '/rhyia' },
   { image: "/valzali.jpg", name: "Valzali", ci: 3, link: '/valzali' }
 ]
 
-const selected = ref(0)
-const inShift = ref<undefined | number>(undefined)
-const inMov = ref(false)
-
-const sorted = computed(() => {
-  return characters.slice(selected.value).concat(characters.slice(0, selected.value))
-})
-
-function move(index) {
-  inMov.value = true
-  inShift.value = selected.value
-  setTimeout(() => {
-    inMov.value = false
-    const newIndex = selected.value + index
-    if (newIndex < 0)
-      selected.value = characters.length - 1
-    else if (newIndex >= characters.length)
-      selected.value = 0
-    else
-      selected.value = newIndex
-  }, 500)
-
-  setTimeout(() => inShift.value = undefined, 500)
-}
-
-
-const classes = {
-  default: `lg:w-[70%] lg:h-[80%] h-4/5 w-[90%] absolute ease-in-out duration-500 transition-all lg:top-1/2 top-0 left-1/2 lg:-translate-y-[60%] -translate-x-1/2 `,
-  inMovmement: `lg:w-[70%] lg:h-[80%] h-4/5 w-4/5 absolute ease-in-out duration-500 transition-all top-1/2 -left-1/4 -translate-x-full `
-}
-
-const rotations = [
-	"rotate-[0deg]",
-	"rotate-[6deg]",
-	"rotate-[12deg]",
-	"rotate-[18deg]"
-]
-
-const rotationsMov = [
-	"-rotate-[30deg]",
-	"-rotate-[36deg]",
-	"-rotate-[42deg]",
-	"-rotate-[48deg]"
-]
-
-const decideClasses = (char: Character, i: number) => {
-  if (inShift.value == char.ci)
-    return classes.inMovmement + ' ' + rotationsMov[i]
-  else
-    return classes.default + ' ' + rotations[i]
-}
+const cardMoving = ref(false)
+const characters = ref(charactersRef.slice())
+const cardRef = ref()
+const topCard = computed( () => characters.value[characters.value.length - 1]) 
+const bottomCard = computed( () => characters.value[0]) 
 
 function zOf(char: Character) {
-  return sorted.value.indexOf(char)
+  return characters.value.findIndex( c => c.image == char.image )
+}
+
+function toBack() {
+	cardMoving.value = true
+	cardRef.value[topCard.value.ci]
+		.move()
+		.then(  _ => {
+			// displacing the last onto first place in an immutable way so that the change is registered
+			characters.value = [topCard.value, ...characters.value.slice(0, -1)];
+			cardMoving.value = false
+		});
+}
+
+function toFront() {
+	cardMoving.value = true 
+	cardRef.value[bottomCard.value.ci]
+		.move()
+		.then( _ => {
+			// displacing the first onto last place in an immutable way so that the change is registered
+			characters.value = [...characters.value.slice(1), bottomCard.value]; 
+			cardMoving.value = false
+		}); 
 }
 
 </script>
@@ -79,8 +56,8 @@ function zOf(char: Character) {
 
 
 		<div class="lg:w-1/2 w-full flex flex-col lg:pl-24 justify-center items-center lg:items-start py-12 lg:py-0 gap-y-8">
-			<h1 class="text-5xl font-semibold text-slate-200 font-inkut text-center lg:start"> Black Mountain </h1>
-			<p class="text-white w-4/5"> A seemingly random village is attacked by bandits. Always willing to work for coin,
+			<h1 class="text-5xl font-semibold text-slate-200 font-inkut text-center lg:start"> Threaded Hearts </h1>
+			<p class="text-white w-4/5 text-center lg:text-left"> A seemingly random village is attacked by bandits. Always willing to work for coin,
 				our band of adventurers is hired to help out. Of course, they had no idea their involvement would put them right
 				in the middle of a war between angels and demons... </p>
 				<nav class="flex lg:flex-row flex-col justify-start gap-8 items-center">
@@ -93,19 +70,18 @@ function zOf(char: Character) {
 					<ArrowRight class="ml-2 font-bold" />
 				</a>
 			</nav>
-		</div>
+		</div> 
 		<div class="lg:w-1/2 w-full mt-12 lg:mt-0 lg:h-full h-4/5 flex flex-col gap-y-10 items-center justify-end lg:p-12 relative">
-				<template v-for="char, i of characters">
-					<CharacterCard :style="`z-index: ${20 - zOf(char)}`" :class="decideClasses(char, i)"
-					 :image="char.image" :link="char.link"/>
+				<template v-for="char, i of charactersRef" :key="char.ci">
+					<HomepageCard :image="char.image" :index="char.ci" :z="zOf(char)" ref="cardRef" :link="char.link" />
 				</template>
 			<div class="flex-row flex justify-center gap-x-12 mt-64 lg:pt-0 items-center font-inkut lg:text-4xl text-2xl text-[#D9BB52]">
-				<button @click="move(-1)" class="text-5xl">
+				<button :disabled="cardMoving" @click="() => toFront()" class="text-5xl">
 					< </button>
 					<h2 class="lg:w-96 w-44 text-center">
-						{{ characters[selected].name }}
+						{{ topCard.name }}
 					</h2>
-					<button @click="move(1)" class="text-5xl"> > </button>
+					<button :disabled="cardMoving" @click="() => toBack()" class="text-5xl"> > </button>
 				</div>
 			</div>
 		</div>
