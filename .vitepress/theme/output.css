@@ -741,6 +741,10 @@ video {
   margin-top: 16rem;
 }
 
+.mt-24 {
+  margin-top: 6rem;
+}
+
 .block {
   display: block;
 }
@@ -1032,6 +1036,22 @@ video {
 
 .overflow-scroll {
   overflow: scroll;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.overflow-x-clip {
+  overflow-x: clip;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
 }
 
 .truncate {
@@ -14791,6 +14811,10 @@ video {
 
 .pt-6 {
   padding-top: 1.5rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
 }
 
 .text-left {
