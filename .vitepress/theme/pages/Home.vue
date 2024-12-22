@@ -49,6 +49,24 @@ function toFront() {
 		}); 
 }
 
+const touchStartX = ref(0)
+const swipeThreshold = 50
+
+function handleTouchStart(event) {
+      touchStartX.value = event.touches[0].clientX;
+}
+function handleTouchEnd(event) {	
+	const touchEndX = event.changedTouches[0].clientX;
+	const delta = touchEndX - touchStartX.value
+	
+
+	if(delta > swipeThreshold && !cardMoving.value) {
+		toFront()	
+	} else if(delta < -swipeThreshold && !cardMoving.value) {
+		toBack()
+	}
+}
+
 </script>
 
 <template>
@@ -71,8 +89,8 @@ function toFront() {
 				</a>
 			</nav>
 		</div> 
-		<div class="lg:w-1/2 w-full mt-12 lg:mt-0 lg:h-full h-4/5 flex flex-col gap-y-10 items-center justify-end lg:p-12 relative">
-				<template v-for="char, i of charactersRef" :key="char.ci">
+		<div class="overflow-x-clip lg:w-1/2 w-full mt-12 lg:mt-0 lg:h-full h-4/5 flex flex-col gap-y-10 items-center justify-end lg:p-12 relative" @touchstart="handleTouchStart" @touchend="handleTouchEnd"  >
+				<template v-for="char, i of charactersRef" :key="char.ci" >
 					<HomepageCard :image="char.image" :index="char.ci" :z="zOf(char)" ref="cardRef" :link="char.link" />
 				</template>
 			<div class="flex-row flex justify-center gap-x-12 mt-64 lg:pt-0 items-center font-inkut lg:text-4xl text-2xl text-[#D9BB52]">
