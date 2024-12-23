@@ -3,6 +3,7 @@ import { computed, onMounted, ref, watch } from 'vue';
 import CharacterCard from '../components/CharacterCard.vue'
 import HomepageCard from '../components/HomepageCard.vue'
 import ArrowRight from '../icons/ArrowRight.vue'
+import {data as sessions} from '../sessions.data.js'
 
 interface Character {
   image: string,
@@ -17,6 +18,7 @@ const charactersRef = [
   { image: "/valzali.jpg", name: "Valzali", ci: 3, link: '/valzali' }
 ]
 
+const latestSession = sessions[0]
 const cardMoving = ref(false)
 const characters = ref(charactersRef.slice())
 const cardRef = ref()
@@ -80,6 +82,7 @@ function handleTouchEnd(event) {
 				in the middle of a war between angels and demons... </p>
 				<nav class="flex lg:flex-row flex-col justify-start gap-8 items-center">
 					<a
+					:href="latestSession.url"
 					class="font-semibold rounded-md w-44 bg-gradient-to-r flex flex-col justify-center from-[#D9BB52] to-[#B19634] text-white text-center h-12">
 					Latest Session
 				</a>

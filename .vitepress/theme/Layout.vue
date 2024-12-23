@@ -2,6 +2,8 @@
 import { useData, withBase } from 'vitepress'
 import Home from './pages/Home.vue';
 import Character from './pages/Character.vue';
+import SessionListing from './pages/SessionListing.vue';
+import Session from './pages/Session.vue';
 // https://vitepress.dev/reference/runtime-api#usedata
 const { site, frontmatter } = useData()
 </script>
@@ -13,13 +15,15 @@ const { site, frontmatter } = useData()
     <div class="w-full h-16 flex flex-row items-center justify-between px-12 shrink-0 border-b border-slate-500">
       <a class="text-slate-200 font-semibold text-xl" :href="withBase('/')"> Home </a>
       <div>
-      <a class="text-slate-200 font-semibold text-xl mr-8"> Sessions </a>
+      <a class="text-slate-200 font-semibold text-xl mr-8" :href="withBase('/sessions/')"> Sessions </a>
       <a class="text-slate-200 font-semibold text-xl"> Lore </a>
         
       </div>
     </div>
     <Home v-if="frontmatter.home" />
     <Character v-else-if="frontmatter.layout == 'character' " />
+    <SessionListing v-else-if="frontmatter.layout == 'session-home' " />
+    <Session v-else-if="frontmatter.layout == 'session' " />
     <div v-else>
       <a href="/">Home</a>
       <Content />
