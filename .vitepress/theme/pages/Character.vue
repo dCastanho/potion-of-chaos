@@ -4,11 +4,7 @@ import CharacterProperty from '../components/CharacterProperty.vue';
 import CharacterCard from '../components/CharacterCard.vue';
 import { computed, onMounted } from 'vue';
 import { Chart } from 'chart.js/auto';
-import AxeSwing from '../../gameicons/lorc/axe-swing.svg'
-import BearFace from '../../gameicons/sparker/bear-face.svg'
-import FlatPaw from '../../gameicons/lorc/flat-paw-print.svg'
-import BullHorns from '../../gameicons/lorc/bull-horns.svg'
-import Traits from './Traits.vue';
+import Traits from '../components/Traits.vue';
 
 const { frontmatter } = useData()
 
