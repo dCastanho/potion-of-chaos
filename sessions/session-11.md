@@ -1,0 +1,37 @@
+---
+layout: session
+number: 11
+arc: 2
+author: Dungeon Master
+title: The Kingdom of Night
+tldr: "The adventurers descend into an underground kingdom of Blackstone, where they encounter a divided society of Tieflings and Aasimar, and learn of the kingdom’s tyrannical past under King Mahakar. After reuniting with Minerva, they uncover disturbing secrets, including the identity of Seraphim, and are thrust into a high-speed chase involving a mysterious figure, leading to a refuge at Zarasha’s tavern. That night, the group’s nightmares grow worse, with Minerva’s dream of her parents’ death becoming a painful reality."
+date: November, 2024
+---
+Our adventurers, now inside the black gazebo, descend into the depths of the mountain. Upon reaching their destination, they discover what appears to be an altar, filled with candles and papyrus notes, created, it seems, to venerate the entrance at which they find themselves.  
+
+This entrance to an underground kingdom made exclusively of Blackstone, illuminated by the weak green light emitted by the cave walls. 
+
+Simultaneously, on a beach close by, Minerva, a powerful minotaur warrior, and a companion of Rufus, wakes up on a bank of black sand, having difficulty remembering how she got to where she is now. When she composes herself, the barbarian notices the various houses and buildings made of black stone covering ther horizon in front of her. 
+
+The architecture was impressive and relatively advanced compared to what Minerva was used to, but more peculiarly, she also noticed that these buildings were in excellent condition despite the passage of time. That's when she noticed them, the flash of several torch lights passing through the black corridors of this city.
+
+Finding a gap between two buildings, the remaining adventurers enter the city and come across a market full of life. Hundreds of tieflings and Assimar exclusively create a cacophony of chaos, trying to buy fish and vegetables at the best possible prices before anyone else. 
+It didn’t take long before the adventurers were approached by a shady street vendor, while a confused Minerva stumbled towards the local tavern.
+
+The street vendor was persistent, trying to sell them some *"spicy cabbage's,"* a euphemism referring to a powerful narcotic. Much to his dismay, his customers were only in the market for information, interested in finding where they were, exclaiming that they came from the surface, being surprised to have found a civilization beneath the mountain. Strangely, the seller couldn't fathom what these strangers were saying, suspecting they already had one lettuce too many, he simply gave up trying to sell his goods and left in confusion.
+
+At the tavern, Calidum Alas, or Hot Wings in the common tongue, Minerva was welcomed by the proprietary, Zarasha, a friendly Tiefling who realizes that her potential client looks confused and lost. Shortly after placing Minerva in a chair, the remaining adventurers enter the tavern, and Rufus, recognizing her long-term friend, rushes the rest of the group to approach her. 
+
+Now reunite, the group interrogates Zarasha for information. After some discussion about a forbidden topic (a woman's age) and some intentional spitting into a certain green shortling's glass, Zarasha also appeared confused when the adventurers mentioned the surface, and advised them, despite not completely understanding, that they should not share such information with just anyone.
+
+Zarasha tells them the story of King Mahakar, an Isamar tyrant whose lineage had ruled over the kingdom of Nocturna for generations. This dynasty was known for its inquisition regarding the origins of said kingdom, and the royals of that time solemnly defended that Nocturna was created by the angels alone, and the Tieflings who lived there were blessed to be so, forgiven for their sins, but never to be forgotten. Naturally, this resulted in serious racial tensions, forcing the Tieflings to experience second-class citizenship during the reign of Mahakar. This division was so great that the kingdom was physically cleaved in two, separated by a river, where the Tieflings, the majority of the working class, were isolated to the agricultural and fishing districts, which our heroes now found themselves in. 
+
+It was only fifty years ago that the kingdom's leadership changed, when a mysterious warrior, known only as the Raven King, publicly stood up to Mahakar's reign, proceeding to single handedly invade the royal castle and dethrone Mahakar. Despite being victorious, the Raven King suffered injuries that prevent him from leaving the castle with regularly to this day, but while recovering from his wounds, he governed the kingdom towards a new era of prosperity and equality for all, having improved the quality of life for the poorest sectors, like the fishing district. For these achievements, the citizens inaugurated a statue in honor of the king, which was placed in the center of the square, where supposedly, the Raven King made his first public speech.
+
+Cicie began to suspect this place and the strange behavior expressed by the citizens, and consequently, the adventurers regrouped in a more discreet location. After discussing their priorities, which were to find out more about the demon responsible for the deaths on the surface, the dialogue was interrupted by two strange figures. The first, a black silhouette on top of a roof, menacingly watching over the group, having retreated after being discovered. The second was a flash of someone in a wheelchair passing through the city streets. 
+
+The adventurers decide to follow the figure in the wheelchair, ending up becoming a high-speed chase between Minerva, and a young tiefling girl with a scarf and racing glasses, and two stumps in the place of her legs. Her name was, Sera, also known as the self-proclaimed *"goddess of speed"*. Minerva ends up catching Sera, but the wheelchair, modified with unknown arcane properties, continues to gain speed even without a pilot, ending up destroying the street vendor's wheelbarrow, once full of *"Spicy Cabbages"*.
+
+With the streets beginning to flood with guards, called to investigate the commotion at hand, Zarasha offers her tavern as a refuge to the adventurers, as a reward for saving her daughter Sera, whom they later discover, in actuality, to be named as Seraphim, the same name as the Emissary they had just faced only a few hours prior.
+
+Filled with questions and surrounded by mystery, the adventurers retired after a long day, but it was the hardiest night they had spent does far. The nightmares became more aggressive, and the night began to exhaust our adventurers, instead of replenishing their strength. But out of all of them, Minerva experienced the worst the demon had planned for that night, having relived the memory of her parents' brutal death at the hands of previously unknown figures. In that same dream, Minerva was injured during combat, suffering a deep laceration on her abdomen. As she slowly lost consciousness in her dream, so too did she regain it in the waking world. But when she opened her eyes, she was faced with a gruesome sight, that of a white bed sheet painted in red, and beneath it, that same wound she had dreamed of, oozing crimson with each of her shallow breaths. And so it was, that the nightmare had become **reality**.
