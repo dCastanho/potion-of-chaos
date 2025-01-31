@@ -92,7 +92,7 @@ function handleTouchEnd(event) {
 				</a>
 			</nav>
 		</div> 
-		<div class="overflow-x-clip lg:w-1/2 w-full mt-12 lg:mt-0 lg:h-full h-4/5 flex flex-col gap-y-10 items-center justify-end lg:p-12 relative" @touchstart="handleTouchStart" @touchend="handleTouchEnd"  >
+		<div class="overflow-x-clip  lg:overflow-x-visible lg:overflow-y-clip lg:w-1/2 w-full mt-12 lg:mt-0 lg:h-full h-4/5 flex flex-col gap-y-10 items-center justify-end lg:p-12 relative" @touchstart="handleTouchStart" @touchend="handleTouchEnd"  >
 				<template v-for="char, i of charactersRef" :key="char.ci" >
 					<HomepageCard :image="char.image" :index="char.ci" :z="zOf(char)" ref="cardRef" :link="char.link" />
 				</template>
